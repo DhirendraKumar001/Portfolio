@@ -1,0 +1,232 @@
+:root {
+  --bg: #0b0f14;
+  --sidebar-bg: #0d1218;
+  --surface: #131920;
+  --surface-hi: #19212a;
+  --border: #232c37;
+  --text: #e8e6e1;
+  --text-dim: #8b96a5;
+  --text-faint: #4e5967;
+  --amber: #e8a33d;
+  --amber-dim: #c98a2c;
+  --teal: #5fb3ac;
+  --red: #d9705a;
+  --green: #7fce9a;
+
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --sidebar-w: 272px;
+  --topbar-h: 44px;
+  --statusbar-h: 26px;
+  --content-w: 1180px;
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 200;
+  mix-blend-mode: overlay;
+}
+
+::selection {
+  background: var(--amber);
+  color: #10151b;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+/* ---------- app shell ---------- */
+
+.app-shell {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: var(--topbar-h) 1fr var(--statusbar-h);
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main"
+    "sidebar statusbar";
+}
+
+.app-main {
+  grid-area: main;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-main {
+    scroll-behavior: auto;
+  }
+}
+
+.main-inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- shared "module" section pattern ---------- */
+
+.module {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.module-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+
+.module-label .prompt {
+  color: var(--teal);
+}
+
+.module-label .cmd {
+  color: var(--text-dim);
+}
+
+.module-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-fade.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+/* buttons shared across components */
+
+.btn {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--amber);
+  color: #16110a;
+}
+
+.btn--primary:hover {
+  background: #f0b054;
+}
+
+.btn--ghost {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  border-color: var(--text-faint);
+}
+
+/* ---------- responsive: collapse shell below desktop ---------- */
+
+@media (max-width: 980px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-shell {
+    display: block;
+    height: auto;
+  }
+
+  .main-inner {
+    padding: 0 20px;
+  }
+
+  .module {
+    padding: 52px 0;
+  }
+}

@@ -1,0 +1,13 @@
+.about__body {
+  max-width: 68ch;
+  font-size: 17px;
+  color: var(--text-dim);
+}
+
+.about__body p {
+  margin: 0 0 18px;
+}
+
+.about__body p:last-child {
+  margin-bottom: 0;
+}

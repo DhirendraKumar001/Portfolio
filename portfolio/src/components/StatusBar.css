@@ -1,0 +1,31 @@
+.statusbar {
+  grid-area: statusbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--amber-dim);
+  padding: 0 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #16110a;
+}
+
+.statusbar__group {
+  display: flex;
+  gap: 16px;
+}
+
+.statusbar__item--branch {
+  font-weight: 700;
+}
+
+.statusbar__item--live {
+  color: #14351f;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .statusbar {
+    display: none;
+  }
+}
