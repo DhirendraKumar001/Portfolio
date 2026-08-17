@@ -11,7 +11,7 @@ const ICONS = {
 
 const BADGE_ICONS = {
   React: Atom,
-  "Node.js": Server,
+  "SpringBoot": Server,
   Java: Coffee,
 };
 

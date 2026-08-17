@@ -19,7 +19,7 @@ export const profile = {
     { value: "100+", label: "Problems solved" },
     { value: "1mo", label: "Internship" },
   ],
-  badges: ["React", "Node.js", "Java"],
+  badges: ["React", "Spring Boot", "Java"],
   socials: [
     { label: "GitHub", href: "https://github.com/DhirendraKumar001", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/dhirendra-kumar-832880288", icon: "linkedin" },
