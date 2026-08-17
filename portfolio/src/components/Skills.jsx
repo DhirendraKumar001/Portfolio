@@ -4,28 +4,24 @@ import "./Skills.css";
 
 export default function Skills() {
   return (
-    <section id="skills" className="module">
-      <div className="main-inner">
+    <section id="skills" className="section section--tight skills-section">
+      <div className="container">
         <Reveal>
-          <p className="module-label">
-            <span className="prompt">$</span>
-            <span className="cmd">{skills.command}</span>
-          </p>
+          <p className="section-eyebrow">{skills.eyebrow}</p>
+          <h2 className="section-title">{skills.title}</h2>
 
           <div className="skills-grid">
             {skills.groups.map((group, i) => (
-              <div className="skill-dir" key={group.dir}>
-                <p className="skill-dir__name">
-                  <span className={`skill-dir__dot skill-dir__dot--${i % 5}`} />
-                  {group.dir}
-                </p>
-                <ul className="skill-dir__list">
+              <div className="skill-card stagger-item" style={{ "--i": i }} key={group.category}>
+                <div className="skill-card__dot" />
+                <h3 className="skill-card__title">{group.category}</h3>
+                <div className="skill-card__tags">
                   {group.items.map((item) => (
-                    <li key={item}>
-                      <span className="tree-glyph">├──</span> {item}
-                    </li>
+                    <span className="skill-card__tag" key={item}>
+                      {item}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>

@@ -30,11 +30,12 @@ export default function Sidebar({ active, onNavigate, open, onClose }) {
         <div className="sidebar__folder">
           <span className="sidebar__folder-name">▾ portfolio</span>
           <nav className="sidebar__tree">
-            {TREE.map((item) => (
+            {TREE.map((item, i) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 className={`sidebar__item ${active === item.id ? "sidebar__item--active" : ""}`}
+                style={{ "--i": i }}
                 onClick={(e) => {
                   onNavigate(e, item.id);
                 }}

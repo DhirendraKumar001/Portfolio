@@ -1,6 +1,6 @@
 # dev-portfolio
 
-A static, single-page developer portfolio built with React + Vite. Styled like a terminal/dashboard — a typed `whoami` hero, a skills "directory tree," projects as repo cards, and experience as a `git log`.
+A static, single-page developer portfolio built with React + Vite. A warm dark charcoal theme with an orange/red gradient accent, top navigation, a bold hero with an avatar and floating skill badges, and clean card-based sections for skills, projects, and experience.
 
 ## Run it
 

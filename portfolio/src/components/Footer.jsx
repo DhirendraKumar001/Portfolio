@@ -6,17 +6,17 @@ export default function Footer() {
 
   function backToTop(e) {
     e.preventDefault();
-    document.querySelector(".app-main")?.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <footer className="footer">
-      <div className="main-inner footer__inner">
+      <div className="container footer__inner">
         <span>
           © {year} {profile.name} — built with React + Vite
         </span>
-        <a href="#top" onClick={backToTop}>
-          back to top ↑
+        <a href="#home" onClick={backToTop}>
+          Back to top ↑
         </a>
       </div>
     </footer>

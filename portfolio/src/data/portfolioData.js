@@ -4,147 +4,143 @@
 // ─────────────────────────────────────────────────────────
 
 export const profile = {
-  name: "Aditya Sharma",
-  handle: "adityasharma",
-  title: "Software Engineer (Fresher)",
+  name: "Dhirendra Kumar",
+  role: "Java Full Stack Developer | Software Engineer",
+  greeting: "Hi, I am",
   tagline:
-    "B.Tech CSE grad who likes turning DSA sheets into shipped products. Looking for my first SDE role.",
-  location: "Pune, India",
-  status: "open to SDE-1 roles",
-  email: "aditya.sharma.dev@gmail.com",
-  phone: "+91 98765 43210",
-  resumeUrl: "#",
+    "A B.Tech CSE grad who likes turning DSA sheets into shipped products. Looking for my first full-time SDE role.",
+  location: "Haryana, India",
+  status: "Open to work",
+  email: "dhiraendra542005@gmail.com",
+  phone: "+91 6200061173",
+  resumeUrl: "https://drive.google.com/file/d/1jL3Aj23eXEtgymmG19PPhOQ2abfMQyM9/view?usp=drive_link",
+  stats: [
+    { value: "4+", label: "Projects built" },
+    { value: "100+", label: "Problems solved" },
+    { value: "1mo", label: "Internship" },
+  ],
+  badges: ["React", "Node.js", "Java"],
   socials: [
-    { label: "GitHub", href: "https://github.com/", flag: "--github" },
-    { label: "LinkedIn", href: "https://linkedin.com/", flag: "--linkedin" },
-    { label: "LeetCode", href: "https://leetcode.com/", flag: "--leetcode" },
-    { label: "HackerRank", href: "https://hackerrank.com/", flag: "--hackerrank" },
+    { label: "GitHub", href: "https://github.com/DhirendraKumar001", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/dhirendra-kumar-832880288", icon: "linkedin" },
+    { label: "LeetCode", href: "https://leetcode.com/u/PC152dunA6/", icon: "leetcode" },
+    { label: "HackerRank", href: "https://www.hackerrank.com/profile/dhiraendra542005", icon: "hackerrank" },
   ],
 };
 
 export const about = {
-  command: "cat about.md",
+  eyebrow: "About Me",
+  title: "A little about my journey",
   paragraphs: [
-    "I'm a final-year-turned-graduate Computer Science engineer from Pune, India, with a strong grounding in data structures, algorithms, and building full-stack web apps end to end. I've solved 400+ problems across LeetCode and GeeksforGeeks and shipped three production-shaped projects during college.",
-    "I spent 3 months as an SDE Intern building internal tools at a Series A startup, where I learned what 'production-ready' actually means: tests, code review, and not touching the database on a Friday. I'm now looking for a full-time SDE-1 role where I can keep learning fast and own real features.",
+  "I’m Dhirendra Kumar, from East Champaran, Bihar. I recently completed my Bachelor of Technology in Computer Science and Engineering from Maharishi Markandeshwar University, Mullana, Ambala, Haryana, with an overall CGPA of 6.8.",
+  "During my academic journey, I developed a solid foundation in programming, problem-solving, software development, and core computer science concepts. Studying away from my hometown also helped me become more adaptable, independent, and confident while connecting with people from diverse backgrounds.",
+  "I am now eager to begin my professional journey in the technology field, where I can apply my technical knowledge, enhance my practical skills, contribute to meaningful projects, and continue growing as a software professional."
+  ],
+  highlights: [
+    { label: "Education", value: "B.Tech, Computer Science — MMU, 2026" },
+    { label: "CGPA", value: "6.8 / 10" },
+    { label: "Based in", value: "Haryana, India" },
+    { label: "Looking for", value: "SDE-1 / Graduate Engineer roles | Java Full Stack roles" },
   ],
 };
 
 export const skills = {
-  command: "ls skills/ --tree",
+  eyebrow: "What I Know",
+  title: "Skills & tools",
   groups: [
     {
-      dir: "languages/",
-      items: ["Java", "Python", "C++", "JavaScript", "SQL"],
+      category: "Languages",
+      items: ["Java", "Python Basics", "JavaScript", "SQL"],
     },
     {
-      dir: "web-dev/",
-      items: ["React", "Node.js", "Express.js", "REST APIs", "Tailwind CSS"],
+      category: "Web Development",
+      items: ["React", "SpringMVC", "SpringDataJPA", "SpringSecurity", "SpringBoot", "REST APIs", "Tailwind CSS"],
     },
     {
-      dir: "databases/",
-      items: ["MySQL", "MongoDB", "Firebase"],
+      category: "Databases",
+      items: ["MySQL", "MongoDB", "PostgreSQL"],
     },
     {
-      dir: "cs-fundamentals/",
+      category: "CS Fundamentals",
       items: ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks"],
     },
     {
-      dir: "tools/",
+      category: "Tools",
       items: ["Git & GitHub", "Postman", "Docker (basics)", "VS Code", "Linux"],
     },
     {
-      dir: "certifications/",
+      category: "Certifications",
       items: [
-        "AWS Cloud Practitioner",
-        "Meta Front-End Developer — Coursera",
-        "DSA Self Paced — GeeksforGeeks",
+        "ClaudeCode 101, Claude Cowork - Antrophic",
+        "Java Full Stack Developer — Xplore Academy",
+        "SpringBoot - Scaler Topics",
       ],
     },
   ],
 };
 
 export const projects = {
-  command: "ls projects/ --sort=recent",
+  eyebrow: "My Work",
+  title: "Featured projects",
   items: [
     {
-      name: "campus-connect",
+      name: "The Indian Tradition - Ecommerce Website",
       description:
-        "A MERN-stack platform for college clubs to post events and manage RSVPs. Used by 500+ students across 2 fests during college.",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      metric: "500+ users",
-      href: "#",
-      status: "active",
+      "he Indian Tradition is an authentic e-commerce destination bringing India’s rich cultural heritage, timeless craftsmanship, and regional artistry straight to your doorstep. We bridge the gap between skilled traditional artisans and conscious shoppers worldwide who appreciate quality, heritage, and sustainable craftsmanship.",
+      tech: ["React", "SpringBoot", "MySql",],
+      href: "https://github.com/DhirendraKumar001/The_Indian_Tradition-.git",
+      status: "Live",
     },
     {
-      name: "dsa-visualizer",
+      name: "Vakeel - Legal Case Management System ",
       description:
-        "An interactive web app that animates sorting algorithms and graph traversals step by step, built to help juniors prep for placements.",
-      tech: ["JavaScript", "HTML/CSS"],
-      metric: "120 stars",
-      href: "#",
-      status: "active",
+      "Vakeel is a comprehensive, cloud-based Legal Case Management System designed specifically for advocacy practices, law firms, independent attorneys, and corporate legal departments. Built to streamline complex legal workflows, Vakeel automates case tracking, client management, cause list updates, and legal documentation into one intuitive platform.",
+      tech: ["React", "SpringBoot", "MySql"],
+      href: "https://github.com/DhirendraKumar001/Vakeel.git",
+      status: "Live",
     },
     {
-      name: "expense-tracker-api",
+      name: "CyberBank - Online Banking System",
       description:
-        "A REST API for a personal finance tracker with JWT auth, budgeting rules, and CSV export — built to practice clean backend architecture.",
+      "CyberBank is a modern, enterprise-grade Online Banking System engineered to deliver secure, seamless, and omnichannel financial services for retail and corporate banking clients. Built on a modular, microservices-driven architecture, CyberBank empowers financial institutions to offer real-time account management, fast payment processing, and tailored digital banking experiences.",
       tech: ["Java", "Spring Boot", "MySQL"],
-      metric: "college project",
-      href: "#",
-      status: "archived",
-    },
-    {
-      name: "smart-attendance",
-      description:
-        "Face-recognition based attendance system built at a 24-hour hackathon. Placed in the top 5 out of 60 teams.",
-      tech: ["Python", "OpenCV", "Flask"],
-      metric: "Top 5 / 60 teams",
-      href: "#",
-      status: "active",
+      href: "https://github.com/DhirendraKumar001/CyberBank.git",
+      status: "Live",
     },
   ],
 };
 
 export const experience = {
-  command: "git log --author=adityasharma --oneline",
+  eyebrow: "Journey",
+  title: "Experience & education",
   entries: [
     {
-      hash: "f4a2c81",
-      role: "SDE Intern",
-      org: "Nimbus Labs, Pune",
-      period: "Jan 2026 — Mar 2026",
-      summary:
-        "Built and shipped an internal admin dashboard used by 3 teams, cutting manual report generation time from 2 hours to 5 minutes.",
+      role: "Java Developer Intern",
+      org: "TechnoHacks Edutech",
+      period: "June 2024 — July 2024",
+      summary:"Worked on a Java  project for a ATM UI interface, implementing features like transection processing, and user authentication.",
+      type: "work",
     },
     {
-      hash: "9d17e0b",
       role: "B.Tech, Computer Science & Engineering",
-      org: "Savitribai Phule Pune University",
+      org: "Maharishi Markandeshwar University, Ambala, Haryana, India",
       period: "2022 — 2026",
-      summary: "CGPA: 8.6/10. Core coursework in DSA, DBMS, OS, and Computer Networks.",
+      summary: "CGPA: 6.8/10. Core coursework in DSA, DBMS, OS, and Computer Networks.",
+      type: "education",
     },
     {
-      hash: "2c88f3a",
-      role: "Open Source Contributor",
-      org: "GirlScript Summer of Code",
-      period: "Jun 2025 — Aug 2025",
-      summary:
-        "Merged 6 PRs fixing bugs and adding features to a community learning platform used by 10k+ students.",
-    },
-    {
-      hash: "5e0a19d",
-      role: "Winner, Smart India Hackathon (College Round)",
-      org: "SPPU Regional Chapter",
+      role: "Participant of MMU Hackathon (College Round)",
+      org: "Maharishi Markandeshwar University, Ambala, Haryana, India",
       period: "Sep 2025",
       summary:
-        "Led a 4-member team to build a civic-issue reporting app, selected to represent the college at the state round.",
+        "Led a 4-member team to build a Tourism app(Tourist can share their cab rides, hotel rooms if they want. )", 
+      type: "achievement",
     },
   ],
 };
 
 export const contact = {
-  command: "contact --send",
-  heading: "Let's build something",
+  eyebrow: "Get In Touch",
+  heading: "Let's build something together",
   body: "Actively interviewing for SDE-1 / graduate engineer roles across India — open to relocating for the right team. Email is the fastest way to reach me.",
 };

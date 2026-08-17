@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--amber-dim);
+  background: var(--accent-dim);
   padding: 0 14px;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: #16110a;
+  color: #eef1f6;
 }
 
 .statusbar__group {
@@ -20,7 +20,7 @@
 }
 
 .statusbar__item--live {
-  color: #14351f;
+  color: #d7f4e6;
   font-weight: 700;
 }
 

@@ -25,12 +25,12 @@ export default function CodeRain({ className = "" }) {
 
     setup();
 
-    const colors = ["rgba(232, 163, 61, 0.75)", "rgba(95, 179, 172, 0.65)"];
+    const colors = ["rgba(91, 141, 239, 0.65)", "rgba(75, 184, 173, 0.5)"];
 
     function draw() {
-      ctx.fillStyle = "rgba(15, 20, 25, 0.14)";
+      ctx.fillStyle = "rgba(10, 14, 22, 0.16)";
       ctx.fillRect(0, 0, width, height);
-      ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
+      ctx.font = `${fontSize}px "IBM Plex Mono", monospace`;
 
       for (let i = 0; i < columns; i++) {
         const glyph = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
